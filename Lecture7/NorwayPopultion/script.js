@@ -38,7 +38,7 @@
         y: {
           title: { display: true, text: "People" },
           ticks: {
-            callback: v => Number(v).toLocaleString("en-US")
+            callback: v => Number(v).toLocaleString("en-UK")
           }
         }
       },
