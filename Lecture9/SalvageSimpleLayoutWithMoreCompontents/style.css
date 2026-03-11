@@ -1,0 +1,20 @@
+body {
+    background-color: #121212;
+    color: #f8f9fa;
+    padding-top: 56px;
+}
+.card {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.accordion-button::after {
+    filter: invert(1); /* Inverts colors, making white chevron on dark background */
+}

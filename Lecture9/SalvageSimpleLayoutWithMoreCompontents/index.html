@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirate Salvage Market</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">🏴‍☠️ Pirate Salvage Market</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About the Market</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Example Item: Black Pearl -->
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+                <img src="https://images.unsplash.com/photo-1590880449155-b54f958ce314?q=80&w=1129&auto=format&fit=crop" class="card-img-top" alt="Black Pearl">
+                <div class="card-body">
+                    <h5 class="card-title">The Black Pearl</h5>
+                    <p class="card-text">A legendary ghost ship, swift and deadly. Comes with cursed crew.</p>
+
+                    <!-- Section 1: Ship Specifications -->
+                    <div class="accordion bg-dark border-secondary">
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark text-light border-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shipSpecsBlackPearl">
+                                    ⚓ Ship Specifications
+                                </button>
+                            </h2>
+                            <div id="shipSpecsBlackPearl" class="accordion-collapse collapse">
+                                <div class="accordion-body text-light">
+                                    <ul>
+                                        <li> Length: 130 feet </li>
+                                        <li> Cannons: 32 broadside cannons </li>
+                                        <li> Max Speed: 15 knots (or 20 in ghost mode) </li>
+                                        <li> Crew Capacity: 100 pirates + 1 captain </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>Price: 500,000 Gold Coins</strong></p>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#buyModal" data-item="The Black Pearl" data-price="500,000">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card mb-4">
+                <img src="https://images.unsplash.com/photo-1625509845594-24315325da26?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Galleon">
+                <div class="card-body">
+                    <h5 class="card-title">Spanish Galleon</h5>
+                    <p class="card-text">A mighty warship loaded with cannons. Needs some repairs.</p>
+                     <!-- Section 1: Ship Specifications -->
+                    <div class="accordion bg-dark border-secondary">
+                        <div class="accordion-item bg-dark border-secondary">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark text-light border-secondary collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#shipSpecsGalleon">
+                                    ⚓ Ship Specifications
+                                </button>
+                            </h2>
+                            <div id="shipSpecsGalleon" class="accordion-collapse collapse">
+                                <div class="accordion-body text-light">
+                                    <ul>
+                                        <li> Length: 256.9 feet </li>
+                                        <li> Cannons: 138 cannons </li>
+                                        <li> Max Speed: 10 knots  </li>
+                                        <li> Crew Capacity: 350 pirates </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>Price: 300,000 Gold Coins</strong></p>
+                    <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#buyModal" data-item="Spanish Galleon" data-price="300,000">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Purchase Modal -->
+<div class="modal fade" id="buyModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-light">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm Your Purchase</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to buy <strong id="itemName">this item</strong> for <strong><strong id="itemPrice">this item</strong> gold coins</strong>?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-warning" id="confirmPurchase">Confirm Purchase</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  Toast Notification (Success Message) -->
+<div class="toast-container top-0 start-50 translate-middle-x">
+    <div class="toast bg-dark text-light border-secondary" id="purchaseToast">
+        <div class="toast-header bg-secondary text-light border-secondary">
+            <strong class="me-auto">Success</strong>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Purchase completed! Your ship will be delivered to the nearest port.
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+body {
+    background-color: #121212;
+    color: #f8f9fa;
+    padding-top: 56px;
+}
+.card {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+}
